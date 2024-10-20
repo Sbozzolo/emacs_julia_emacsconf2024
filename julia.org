@@ -1,0 +1,95 @@
+#+title: Exploring Shared Philosophies in Julia and Emacs
+#+author: Gabriele Bozzola <sbozzolo.github.io>
+
+#+begin_src
+   _       _ _
+    | |_   _| (_) __ _     _
+ _  | | | | | | |/ _` |  _| |_
+| |_| | |_| | | | (_| | |_   _|
+ \___/ \__,_|_|_|\__,_|   |_|
+
+ _____
+| ____|_ __ ___   __ _  ___ ___
+|  _| | '_ ` _ \ / _` |/ __/ __|
+| |___| | | | | | (_| | (__\__ \
+|_____|_| |_| |_|\__,_|\___|___/
+                               
+
+#+end_src
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Julia is a high-level, dynamic programming language
+
+#+begin_src
+               _
+   _       _ _(_)_
+  (_)     | (_) (_)
+   _ _   _| |_  __ _
+  | | | | | | |/ _` |
+  | | |_| | | | (_| |
+ _/ |\__'_|_|_|\__'_|
+|__/
+#+end_src
+
+Julia can be high-performance, I use it to develop climate models that run on 100s of GPUs
+* Two key features of Julia: multiple dispatch
+#+begin_src julia :results output :session test6
+add(a, b) = a + b
+add(10, 2)
+add(10.0, 2.0)
+#+end_src
+
+Julia specializes functions on types
+
+#+begin_src julia :results output :session test6
+add(a::Float64, b::Float64) = a^b
+add(10.0, 2.0)
+#+end_src
+
+* Two key features of Julia: just ahead-of-time compilation
+
+Julia compiles the most specialized version of functions, if it had not been
+compiled already. (LLVM is used under the hood.)
+
+When types are stable and well-inferred, this leads to performance on par of C.
+
+* What makes Emacs /Emacs/?
+** Interactivity
+** Extensibility
+** Community
+* Julia checks the same boxes
+Julia
+- encourages a REPL-driven, introspective, and interactive workflow
+
+- is largely open to extension/modifications (most of Julia is in Julia)
+
+- has a thriving and welcoming community and lots of packages
+* Thank you!
+#+begin_src
+ _____ _                 _                          _
+|_   _| |__   __ _ _ __ | | __    _   _  ___  _   _| |
+  | | | '_ \ / _` | '_ \| |/ /   | | | |/ _ \| | | | |
+  | | | | | | (_| | | | |   <    | |_| | (_) | |_| |_|
+  |_| |_| |_|\__,_|_| |_|_|\_\    \__, |\___/ \__,_(_)
+                                  |___/
+#+end_src
